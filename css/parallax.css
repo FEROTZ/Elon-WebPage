@@ -5,9 +5,12 @@
 .container-parallax {
     text-align: center;
     color: var(--color);
-    width: 100%;
-    min-height: 100vh;
+    width: 99vw;
+    min-height: 60vh;
     display: flex;
+
+    padding-left: 0 !important;
+    padding-right: 0 !important;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -18,7 +21,7 @@
     background-color: rgba(51, 51, 51, 0.26);
     background-size: cover;
     background-position: center;
-
+    margin: 0;
     /*  this is where the magic happens:  */
     background-attachment: fixed;
 }

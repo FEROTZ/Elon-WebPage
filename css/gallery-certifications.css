@@ -1,47 +1,210 @@
 @import url(https://fonts.bunny.net/css?family=amita:700);
 
 .gallery {
-    /* background: url(https://res.cloudinary.com/ritalbradley/image/upload/v1657644013/pexels-elijah-o_donnell-3473569_o7ohfd.jpg)
-        center center/cover no-repeat; */
-    min-height: 100vh;
-    display: -webkit-flex;
-    display: flex;
-    flex-direction: column;
+  /* background: url(https://res.cloudinary.com/ritalbradley/image/upload/v1657644013/pexels-elijah-o_donnell-3473569_o7ohfd.jpg)
+     center center/cover no-repeat; */
+  min-height: 100vh;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
 }
 
-.title{
-    color: #fff;
-    font-family: Amita;
-    margin: 20px auto;
-    width: 450px;
-    font-size: 3rem;
-    text-align: center;
-    border-bottom: 10px double #29fff7;
+.title {
+  color: #fff;
+  font-family: Amita;
+  margin: 20px auto;
+  width: 450px;
+  font-size: 3rem;
+  text-align: center;
+  border-bottom: 10px double #29fff7;
 }
 
 .gallery-image {
-    width: 450px;
-    height: 300px;
-    margin: 10px;
-    border: 10px solid #29fff7;
-  
-    transition-duration: 1s;
-    object-fit: cover;
+  width: 410px;
+  height: 300px;
+  margin: 10px;
+  transition-duration: 0.5s;
+  object-fit: cover;
 }
 
 .gallery-image:hover {
-    border: 5px solid #29fff7;
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
-    -webkit-filter: none;
-    filter: none;
+  border: 5px solid #29fff7;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  -webkit-filter: none;
+  filter: none;
 }
-
 
 .container-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
+
+/* Agrega estos estilos al final de tu archivo CSS */
+
+.image-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 1); /* Fondo transparente negro */
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: start;
+  line-height: 1.6; /* Mayor espacio entre líneas */
+  transform: translateY(100%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.image-overlay:hover .overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.overlay h1 {
+  color: white; /* Texto blanco */
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.overlay p {
+  color: white; /* Texto blanco */
+  margin: 0;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.overlay p:last-child {
+  position: absolute;
+  bottom: 5px !important; /* Ajuste la posición al gusto */
+  right: 10px; /* Ajuste la posición al gusto */
+  font-size: 1.3rem;
+}
+
+.overlay h1:first-child {
+  position: relative;
+  text-size-adjust: none;
+  /* Eliminado los estilos innecesarios */
+}
+
+.overlay p strong {
+  font-weight: bold;
+  color: white;
+  font-size: 1.3rem;
+
+  /* Eliminado estilos innecesarios */
+}
+
+/* Puedes agregar colores de acento usando clases para elementos específicos */
+
+.overlay .destacado {
+  color: #f2f2f2; /* Ejemplo de color minimalista */
+}
+
+.position-relative h-100 {
+  display: flex;
+  flex-direction: column;
+}
+
+.last div .img-fluid:last-child {
+  margin-top: 20px;
+}
+
+.overlay li {
+  font-size: 1.1rem;
+  
+}
+
+
+/* .image-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 10px solid #29fff7;
+  background-color: rgba(0, 0, 0, 1);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  text-align: left;
+  line-height: 1.6; 
+  transform: translateY(100%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.image-overlay:hover .overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.overlay h1 {
+  color: white; 
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.overlay p {
+  color: white;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.overlay p:last-child {
+  position: absolute;
+  bottom: 10px; 
+  right: 10px; 
+}
+
+.overlay h1:first-child {
+  position: relative;
+  text-size-adjust: none;
+  margin-left: 130px;
+}
+
+.overlay p strong {
+  font-weight: bold;
+  color: white;
+  font-size: 1rem;
+  margin-left: 100px;
+
+}
+
+
+.overlay .destacado {
+  color: #f2f2f2; 
+}
+
+.position-relative h-100 {
+  display: flex;
+  flex-direction: column;
+}
+
+.last div .img-fluid:last-child {
+  margin-top: 20px;
+}
+
+.overlay li {
+  font-size: 1rem;
+  margin-left: 80px;
+
+} */

@@ -261,11 +261,127 @@
 }
 
 .page-header-success {
+    /* Cambia el color de fondo y la opacidad del degradado */
+    background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/embaja_nuevos.png);
+    /* Ajusta la posición del fondo */
+    background-position: center bottom;
+    /* Controla si se repite el fondo */
+    background-repeat: no-repeat;
+    /* Controla cómo se ajusta el fondo al elemento */
+    background-size: cover;
+    /* Limita el ancho máximo del elemento */
+    max-width: 100%; 
+    /* Establece una altura específica */
+    height: 950px; /* Cambia la altura según tu preferencia */
+    /* Ajusta la posición vertical del fondo */
+    background-position-y: 25%;
+}
+
+
+
+.carousel {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .carousel-inner {
+    display: flex;
+  }
+  
+  .carousel-item {
+    flex: 0 0 100%; /* Cada imagen ocupa el 100% del ancho */
+    transition: transform 0.5s ease; /* Transición suave */
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+  }
+
+  
+.page-header-successs {
     background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/exito.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: 25%;
+}
+.page-header-successb {
+    background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/avion.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 2%;
+}
+
+.page-header-successp {
+    background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/Examen.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 2%;
+@media(max-width: 768px){
+}
+@media(min-width: 576px){
+    
+}
+}
+
+.page-header-succesEntre {
+    background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/examen3.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    background-position-y: 2%;
+}
+
+.page-header-succesISE {
+    background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/entrevista.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 2%;
+}
+
+.page-header-succesOTE {
+    background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/examen_linea.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 2%;
+}
+
+.page-header-succesTEST {
+    background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/examen_linea2.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 2%;
+}
+
+.page-header-succesISE {
+    background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/examen2.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 2%;
+}
+
+.page-header-succesCENNI {
+    background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/CENNI.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 2%;
+}
+
+.page-header-succesGrad {
+    background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/Graduados.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 2%;
 }
 
 .page-header-workshops {
@@ -335,11 +451,11 @@
 
 /*** Service ***/
 .service-item {
-    background: #666;
+    background: #07a09e;
     transition: .5s;
 }
 
-.service-item:hover {
+/*.service-item:hover {
     margin-top: -10px;
     background: var(--primary);
 }
@@ -350,7 +466,7 @@
 
 .service-item:hover * {
     color: #161616 !important;
-}
+} */
 
 
 /*** Categories & Courses ***/
@@ -515,9 +631,8 @@
 }
 
 .footer .copyright {
-    padding: 25px 0;
+    padding: 25px 0;    
     font-size: 15px;
-    border-top: 1px solid rgba(256, 256, 256, .1);
 }
 
 .footer .copyright a {
@@ -635,4 +750,18 @@ p.mb-4 {
 
 .navbar-nav a.nav-item:focus{
     color: #00ccc5!important;
+}
+
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    color: white;
+    font-size: 4em;
+}
+
+.position-relative:hover .play-icon {
+    display: block;
 }
