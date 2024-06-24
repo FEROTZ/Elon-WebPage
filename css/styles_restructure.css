@@ -1,0 +1,195 @@
+:root {
+    --primary: #29fff7;
+    --light: #F0FBFC;
+    --dark: #181d38;
+    --black: #161616
+}
+.container-ambassador-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+    gap: 64px;
+}
+.container-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 600px;
+    background-color: #677173;
+    border: 3px solid #61DFF2;
+    font-weight: 500;
+    position: relative;
+}
+.head-card {
+    display: flex;
+    width: 100%;
+    height: 97px;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    background-color: #161616;
+    border-bottom: #161616;
+    /*
+    border: 2.5px solid #61DFF2;*/
+}
+.img-head {
+    width: 50%;
+    height: 90%;
+}
+.body-card {
+    display: flex;
+    flex-direction: row;
+    padding: 16px;
+    width: 100%;
+    height: 100%;
+}
+.section-body-left {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    width: 70%;
+    height: 100%;
+}
+.section-body-right {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    width: 30%;
+    height: 100%;
+}
+.section-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 5px;
+}
+.section-title h1 {
+    padding: 1rem;
+    color: white;
+    align-self: center;
+}
+
+hr {
+    width: 100%;
+    border: 0;
+    height: 3px;
+    background: #61DFF2;
+    margin: 3px 0;
+
+}
+.modal-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 16px;
+}
+
+.modal-icons img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+.section-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #677173; 
+    border: 1px solid  #181d38;
+    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.616);
+    border-radius: 32px;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+.section-information p {
+    align-self: stretch;
+    text-align: justify;
+    color: white;
+    padding: 2%;
+    width: 100%;
+  
+}
+.profile-picture {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;   
+}
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+    object-fit: cover;
+   
+}
+
+.audio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+.play-button {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #61DFF2;
+  color: #161616;
+  border: 1px solid #161616; 
+  border-radius: 5px;
+  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.616);
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.play-button:hover {
+  background-color: #925C34;
+}
+
+.play-icon {
+  margin-right: 8px;
+  <div class="card-body-left">
+  <div class="section-title">
+      <h1>ANGELLIC ROMERO</h1>
+      <hr>
+  </div>
+  <div class="modal-icons">
+      <img src="img/icono (logros).png" alt="modal-icons-1">
+      <img src="img/icono (primer_viaje).png" alt="modal-icons-2">
+      <img src="img/icono (estudios).png" alt="modal-icons-3">
+      <img src="img/icono (nivel_ingles).png" alt="modal-icons-4">
+      <img src="img/icono (paises_visitados).png" alt="modal-icons-5">
+  </div>
+  <div class="section-information">
+      <h2>Logros</h2><br>
+      <p>Desde los días de preparatoria hasta las salas de juntas internacionales, el inglés ha sido mi pasaporte al mundo. Gracias a Express Learning Online, no solo me lancé a aventuras en distintos rincones del globo, sino que también abracé culturas tan diversas como las vistas en Europa Central y el Caribe. Cada conversación con colegas, cada acuerdo cerrado, y cada nueva amistad, se han tejido con las habilidades que ELON me ayudó a pulir. Derribar las barreras de la comunicación me permitieron conectar con mis superiores y compañeros. Estudiar en ELON no fue una simple inversión; fue la chispa de una transformación personal y profesional que aún sigue iluminando mi camino.</p>
+  </div>
+</div>
+<div class="card-body-rigth"> 
+  <div class="profile-picture">
+      <img id="imagen-perfil" class="profile-picture" src="img/3.png" alt="img-profile">
+  </div>    
+  <div class="audio-container">
+      <button class="play-button">
+          <svg class="play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
+          Play
+          <audio id="audio" src="audio"></audio>
+        </button>                        
+  </div>     
+ 
+</div>
