@@ -32,6 +32,8 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/styles-cards.css" rel="stylesheet">
+
 
     <noscript>
         <link rel="stylesheet" href="certificaciones/assets/css/noscript.css" />
@@ -142,251 +144,6 @@
     </div>
 </div>
 
-<style>  
-/*contenedor general de las targetas embajadores*/
-.container-ambassador-cards {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 16px;
-    box-sizing: border-box;
-
-}
-/*contenedor de targeta individual*/
-    .container-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 600px;
-    height: auto;
-    background-color: #181d38;
-    border: 3px solid #61DFF2;
-    }    
-    .card-header-logo {
-    display: flex;
-    width: 100%;
-    height: auto;
-    justify-content: center;
-    object-fit: cover;
-    background-color: #161616;
-    border-bottom: 3px solid #61DFF2;
-    }
-    .card-header-logo img {
-        width: 50%;
-        height: 100%;
-    }
-    .card-body {
-    display: flex;
-    flex-direction: column;
-    padding: 8px;
-    width: 100%;
-    height: 100%;
-    gap: 12px;
-    }
-    /* estilos generales de los h3 titulos y subtitulos*/
-    .h3-titles-subtitles{
-        font-weight: 900;
-        line-height: 1.5; 
-        margin:0; 
-        text-transform: uppercase;
-    }
-    /*estilos de los parrafos generales*/
-    .achievements-p {
-        width: 100%;
-        height: auto;
-        margin: 0;
-        font-size: 16px;
-    }
-    /*estilos generales para los icocnos*/
-    .styles-icons {
-        width: 42px;
-        height: 42px;
-        border-radius: 50%;
-        border: 3px solid #925C34; 
-        box-sizing: border-box; 
-    }
-    /*estilos generales para el texto*/
-    .ambassador-name {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: auto;
-        padding: 8px;
-        box-sizing: border-box;
-        overflow: hidden;
-
-    }
-
-    .card-top {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        height: auto ;
-        gap: 16px;
-    }
-    .card-profile-picture {
-        align-self: center;
-        width: 100%;
-        height: 100%;
-        
-    }
-    .img-ambassador {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        height: 100%;
-        padding: 8px;
-    }
-    .img-ambassador img {
-        transition: transform 0.3s ease;
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        border: 5px solid #abaaaa; 
-        object-fit: fill;
-        box-sizing: border-box; 
-    }
-    /*eferctos de hover */
-    .img-ambassador:hover img {
-    transform: scale(1.1);
-    }
-    .information-icons-add:hover {
-    transform: scale(1.1); 
-    color: #61DFF2; 
-    }
-    .achievements-title:hover {
-    transform: scale(1.1); 
-    }
-    .achievements-title:hover .h3-titles-subtitles {
-    color: #61DFF2; /* Cambia el color del texto al color deseado */
-    }
-    /*estilos del boton*/
-    /*
-    .audio-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 50%;
-        height: 80%;
-        color: #161616;
-        margin: 8px;
-    }
-    .play-button {
-        width: 100%;
-        height: 100%;
-        color: black;
-        background-color: white;
-    }*/
-    .information-icons{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        gap: 8px;
-        width: 100%;
-        height: 100%;
-        padding: 8px;
-    }
-    .information-icons-add {
-        display: flex;
-        flex-direction: row;
-        gap: 8px;
-        transition: transform 0.3s ease, color 0.3s ease;
-    }
-    
-    .card-center {
-        width: 100%;
-    }
-    .achievements {
-        display: flex;
-        flex-direction: column;
-    }
-    .achievements-title {
-        transition: transform 0.3s ease, color 0.3s ease;
-        display: flex;
-        flex-direction: row;
-        justify-content:center;
-        align-items: center;
-        gap: 8px;
-        padding: 8px;
-    }
-    .achievements-title h3 {
-        font-weight: 900;
-        line-height: 1.5; 
-        margin:0; 
-        text-transform: uppercase;
-        letter-spacing: 0;
-        text-align: center;
-    }
-
-    .achievements p {
-        font-size: 16px;
-        text-align: justify;
-
-    }
-
-     .separator {
-      width: 100%;
-      height: 1px;
-      background-color: #ffffff; 
-      margin: 0;
-    }
-    /*estilos seccion inferior de la targeta*/
-    .card-bottom{
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        width: 100%;
-        height: 100%;
-
-    }
-    .countries-visited {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 16px;
-        width: 100%;
-        height: 100%;
-    }
-    .countries-visited h3 {
-        font-weight: 900;
-        line-height: 1.5; 
-        margin:0; 
-        text-transform: uppercase;
-        letter-spacing: 0;
-        text-align: center;
-    }
-    .countries-flags {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: 0;
-        padding: 0;
-        gap: 8px;
-        align-items: center;
-        width: 70%;
-        height: 100%;
-    }
-    .countries-flags img {
-        width: 32px;
-        height: 24px;
-    }
-    /*MEDIAS QUIERYS PARA DIFERENTES TAMAÑOS DE PANTALLA*/
-        /* pantalla mobile peuqueñas */
-        @media (min-width: 300px) and (max-width: 600px) {
-            .card-top {
-            display: flex;
-            flex-direction: column;
-        }   
-    }
-</style>
-
-
 <div class="wow fadeInUp" data-wow-delay="0.1s"">
     <h6 class=" bg-white text-start text-primary" style="display: flex; justify-content: center;">NUESTRO LEGADO DE ALUMNOS
         INTERNACIONALES.</h6></div>
@@ -395,587 +152,274 @@
 </div>
 
     <section class="container-ambassador-cards">
-        <!--tergata de ANGELLIC ROMERO -->
-            <div class="container-card">
-                <div class="card-header-logo">
-                    <img src="img/restructure/IMAGEN nombre sin fonfo .png" alt="imagen-logo-card">
+        <!--tarjeta de ANGELLIC ROMERO -->
+        <div class="container-card">
+            <div class="ambassador-name">
+                <h2>Angellic Romero</h2>
+            </div>
+            <div class="card-top">
+                <div class="card-profile-picture">
+                    <img src="img/restructure/3.png" alt="Imagen-perfil">
                 </div>
-                <div class="card-body">
-                    <div class="ambassador-name">
-                        <h3 class="h3-titles-subtitles">ANGELLIC ROMERO</h3>
-                    </div>
-                    <div class="card-top">
-                        <div class="card-profile-picture">
-                            <div class="img-ambassador">
-                                <img src="img/restructure/3.png" alt="imagen-logo-card">
-                            </div>
-                            <!--
-                            <div class="audio-container">
-                                <button class="play-button">
-                                    <svg class="play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
-                                      <path d="M8 5v14l11-7z"/>
-                                    </svg>
-                                    Play
-                                    <audio id="audio" src="audio"></audio>
-                                  </button>                        
-                            </div>-->
-                        </div>
-                        <div class="information-icons">
-                            <div class="information-icons-add">
-                                <img class="styles-icons" src="img/restructure/icono (estudios).png" alt="icono-estudios">
-                                <div class="title-symbols">
-                                    <h4 class="h3-titles-subtitles">ESTUDIOS</h4>
-                                    <p class="achievements-p">Licenciada en Comercio Internacional,Doctora en Desarrollo Humano,Doctora en Educación y Entornos  Virtuales</p>
-                                </div>
-                            </div>
-                            <div class="information-icons-add">
-                                <img class="styles-icons" src="img/restructure/icono (nivel_ingles).png" alt="icono-nivel-de-ingles">
-                                <div class="title-symbols">
-                                    <h4 class="h3-titles-subtitles">Nivel de ingles</h4>
-                                    <p class="achievements-p">Cl Trinity Collegue London</p>
-                                </div>
-                            </div>
-                            <div class="information-icons-add">
-                                <img class="styles-icons" src="img/restructure/icono (paises_visitados).png" alt="icono-primer-viaje-internacional">
-                                <div class="title-symbols">
-                                    <h4 class="h3-titles-subtitles">Primer viaje Internacional</h4>
-                                    <p class="achievements-p">Septiembre del 2014, a los 21 años de edad</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-center">
-                        <div class="achievements">
-                            <div class="achievements-title">
-                                <img class="styles-icons" src="img/restructure/icono (logros).png" alt="modal-icons-1">
-                                <h4 class="h3-titles-subtitles">Logros</h4>
-                            </div>
-                            <p class="achievements-p">Desde los días de preparatoria hasta las salas de juntas internacionales, el inglés ha sido mi pasaporte al mundo. Gracias a Express Learning Online, no solo me lancé a aventuras en distintos rincones del globo, sino que también abracé culturas tan diversas como las vistas en Europa Central y el Caribe. Cada conversación con colegas, cada acuerdo cerrado, y cada nueva amistad, se han tejido con las habilidades que ELON me ayudó a pulir. Derribar las barreras de la comunicación me permitieron conectar con mis superiores y compañeros. Estudiar en ELON no fue una simple inversión; fue la chispa de una transformación personal y profesional que aún sigue iluminando mi camino.</p>
-                        </div>
-                    </div>
-                    <div class="separator"></div>
-                    <div class="card-bottom">
-                        <div class="countries-visited">
-                            <h3 class="h3-titles-subtitles">paises visitados</h3>
-                            <div class="countries-flags">
-                                <img class="countries-flags-icons" src="img/restructure/banderas/ca.png" alt="">
-                                <img src="img/restructure/banderas/pl.png" alt="">
-                                <img src="img/restructure/banderas/gr.png" alt="">
-                                <img src="img/restructure/banderas/pe.png" alt="">
-                                <img src="img/restructure/banderas/us.png" alt="">
-                                <img src="img/restructure/banderas/de.png" alt="">
-                                <img src="img/restructure/banderas/fr.png" alt="">
-                                <img src="img/restructure/banderas/it.png" alt="">
-                            </div>
-                        </div>
-                    </div>
+                <div class="information-icons">
+                    <img class="styles-icons" src="img/restructure/icono (nivel_ingles).png" alt="Icono de nivel de inglés">
+                    <div class="title-symbols">
+                        <h3 class="h3-titles-subtitles">Nivel de Inglés: C1</h3>
+                        <p class="achievements-p">Validado por Trinity College London</p>
+                    </div> 
                 </div>
             </div>
-       
-            <!--tergata de Ana TierraBlanca-->
-            <div class="container-card">
-                <div class="card-header-logo">
-                    <img src="img/restructure/IMAGEN nombre sin fonfo .png" alt="imagen-logo-card">
-                </div>
-                <div class="card-body">
-                    <div class="ambassador-name">
-                        <h3 class="h3-titles-subtitles">Ana TierraBlanca</h3>
-                    </div>
-                    <div class="card-top">
-                        <div class="card-profile-picture">
-                            <div class="img-ambassador">
-                                <img src="img/restructure/4.png" alt="imagen-logo-card">
-                            </div>
-                    <!--
-                            <div class="audio-container">
-                                <button class="play-button">
-                                    <svg class="play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
-                                      <path d="M8 5v14l11-7z"/>
-                                    </svg>
-                                    Play
-                                    <audio id="audio" src="audio"></audio>
-                                  </button>                        
-                            </div>-->
-                        </div>
-                        <div class="information-icons">
-                            <div class="information-icons-add">
-                                <img class="styles-icons" src="img/restructure/icono (estudios).png" alt="icono-estudios">
-                                <div class="title-symbols">
-                                    <h4 class="h3-titles-subtitles">ESTUDIOS</h4>
-                                    <p class="achievements-p">Licenciada en Ciencias  De la comunicación </p>
-                                </div>
-                            </div>
-                            <div class="information-icons-add">
-                                <img class="styles-icons" src="img/restructure/icono (nivel_ingles).png" alt="icono-nivel-de-ingles">
-                                <div class="title-symbols">
-                                    <h4 class="h3-titles-subtitles">Nivel de ingles</h4>
-                                    <p class="achievements-p">B2  Trinity College London</p>
-                                </div>
-                            </div>
-                            <div class="information-icons-add">
-                                <img class="styles-icons" src="img/restructure/icono (paises_visitados).png" alt="icono-primer-viaje-internacional">
-                                <div class="title-symbols">
-                                    <h4 class="h3-titles-subtitles">Primer viaje Internacional</h4>
-                                    <p class="achievements-p">En Septiembre del 2018 a los 19 años de Edad</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-center">
-                        <div class="achievements">
-                            <div class="achievements-title">
-                                <img class="styles-icons" src="img/restructure/icono (logros).png" alt="modal-icons-1">
-                                <h4 class="h3-titles-subtitles">Logros</h4>
-                            </div>
-                            <p class="achievements-p">Mientras concluía mi carrera universitaria estudié inglés en Express Learning Online. Comencé mi internacionalización en Japón, después hice un voluntariado en Brasil. Posteriormente trabajé en el área de Turismo como concierge bilingüe y actualmente ejerzo la comunicación digital. Hablar inglés me ha permitido ser viajera, fotógrafa y emprendedora. He conocido diferentes lugares de Sudamérica, Norte América y Asia. He aprendido de otras culturas gracias a que estudié y certifiqué el idioma inglés en ELON.</p>
-                        </div>
-                    </div>
-                    <div class="separator"></div>
-                    <div class="card-bottom">
-                        <div class="countries-visited">
-                            <h3 class="h3-titles-subtitles">paises visitados</h3>
-                            <div class="countries-flags">
-                                <img src="img/restructure/banderas/jp.png" alt="">
-                                <img src="img/restructure/banderas/co.png" alt="">
-                                <img src="img/restructure/banderas/gt.png" alt="">
-                                <img src="img/restructure/banderas/pa.png" alt="">
-                                <img src="img/restructure/banderas/br.png" alt="">
-                                <img src="img/restructure/banderas/ca.png" alt="">
-                                <img src="img/restructure/banderas/us.png" alt="">
-                                <img src="img/restructure/banderas/do.png" alt="">
-                            </div>
-                        </div>
-                    </div>
+            <div class="card-center">
+                <p class="achievements-p">
+                    Desde los días de preparatoria hasta las salas de juntas internacionales, el inglés ha sido mi pasaporte al mundo. Gracias a Express Learning Online, no solo me lancé a aventuras en distintos rincones del globo, sino que también abracé culturas tan diversas como las vistas en Europa Central y el Caribe. Cada conversación con colegas, cada acuerdo cerrado, y cada nueva amistad, se han tejido con las habilidades que ELON me ayudó a pulir. Derribar las barreras de la comunicación me permitieron conectar con mis superiores y compañeros. Estudiar en ELON no fue una simple inversión; fue la chispa de una transformación personal y profesional que aún sigue iluminando mi camino.
+                </p>
+            </div>
+            <div class="separator"></div>
+            <div class="card-bottom">
+                <h3>Países Visitados:</h3>
+                <div class="countries-flags">
+                    <img src="img/restructure/banderas/ca.png" alt="Bandera-icono">
+                    <img src="img/restructure/banderas/pl.png" alt="Bandera-icono">
+                    <img src="img/restructure/banderas/gr.png" alt="Bandera-icono">
+                    <img src="img/restructure/banderas/pe.png" alt="Bandera-icono">
+                    <img src="img/restructure/banderas/us.png" alt="Bandera-icono">
+                    <img src="img/restructure/banderas/de.png" alt="Bandera-icono">
+                    <img src="img/restructure/banderas/fr.png" alt="Bandera-icono">
+                    <img src="img/restructure/banderas/it.png" alt="Bandera-icono">
                 </div>
             </div>
-        <!--tergata de Karla Pérez -->
-            <div class="container-card">
-                <div class="card-header-logo">
-                    <img src="img/restructure/IMAGEN nombre sin fonfo .png" alt="imagen-logo-card">
+        </div>
+        <!--tarjeta ana Ana TierraBlanca-->
+        <div class="container-card">
+            <div class="ambassador-name">
+                <h2>Ana TierraBlanca</h2>
+            </div>
+            <div class="card-top">
+                <div class="card-profile-picture">
+                    <img src="img/restructure/4.png" alt="Imagen-perfil">
                 </div>
-                <div class="card-body">
-                    <div class="ambassador-name">
-                        <h3 class="h3-titles-subtitles">Karla Pérez</h3>
-                    </div>
-                    <div class="card-top">
-                        <div class="card-profile-picture">
-                            <div class="img-ambassador">
-                                <img src="img/restructure/5.png" alt="imagen-logo-card">
-                            </div>
-                    <!--
-                            <div class="audio-container">
-                                <button class="play-button">
-                                    <svg class="play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
-                                      <path d="M8 5v14l11-7z"/>
-                                    </svg>
-                                    Play
-                                    <audio id="audio" src="audio"></audio>
-                                  </button>                        
-                            </div>-->
-                        </div>
-                        <div class="information-icons">
-                            <div class="information-icons-add">
-                                <img class="styles-icons" src="img/restructure/icono (estudios).png" alt="icono-estudios">
-                                <div class="title-symbols">
-                                    <h4 class="h3-titles-subtitles">ESTUDIOS</h4>
-                                    <p class="achievements-p">Licenciada en Negocios Internacionales</p>
-                                </div>
-                            </div>
-                            <div class="information-icons-add">
-                                <img class="styles-icons" src="img/restructure/icono (nivel_ingles).png" alt="icono-nivel-de-ingles">
-                                <div class="title-symbols">
-                                    <h4 class="h3-titles-subtitles">Nivel de ingles</h4>
-                                    <p class="achievements-p">B2  Trinity College London</p>
-                                </div>
-                            </div>
-                            <div class="information-icons-add">
-                                <img class="styles-icons" src="img/restructure/icono (paises_visitados).png" alt="icono-primer-viaje-internacional">
-                                <div class="title-symbols">
-                                    <h4 class="h3-titles-subtitles">Primer viaje Internacional</h4>
-                                    <p class="achievements-p"> En septiembre del 2018 a los 19 años de edad.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-center">
-                        <div class="achievements">
-                            <div class="achievements-title">
-                                <img class="styles-icons" src="img/restructure/icono (logros).png" alt="modal-icons-1">
-                                <h4 class="h3-titles-subtitles">Logros</h4>
-                            </div>
-                            <p class="achievements-p">El inglés que aprendí en Express Learning Online desde que era estudiante de preparatoria, me brindó la oportunidad de ser aceptada para trabajar en una empresa internacional de tecnología. He viajado por trabajo y por placer a diferentes países de Norteamérica, Centroamérica, Sudamérica, las Antillas y Europa Central. Lo cual, me ha permitido vivir la interculturalidad muy de cerca, además de que he logrado mejorar mis habilidades de comunicación con mis superiores y compañeros. Aprender inglés y certificarme en ELON ha sido la mejor inversión en tiempo y dinero que mis padres y yo hemos hecho.</p>
-                        </div>
-                    </div>
-                    <div class="separator"></div>
-                    <div class="card-bottom">
-                        <div class="countries-visited">
-                            <h3 class="h3-titles-subtitles">paises visitados</h3>
-                            <div class="countries-flags">
-                                <img src="img/restructure/banderas/de.png" alt="">
-                                <img src="img/restructure/banderas/co.png" alt="">
-                                <img src="img/restructure/banderas/gt.png" alt="">
-                                <img src="img/restructure/banderas/cl.png" alt="">
-                                <img src="img/restructure/banderas/ch.png" alt="">
-                                <img src="img/restructure/banderas/cu.png" alt="">
-                                <img src="img/restructure/banderas/pe.png" alt="">
-                                <img src="img/restructure/banderas/us.png" alt="">
-                                <img src="img/restructure/banderas/br.png" alt="">
-                                <img src="img/restructure/banderas/cz.png" alt="">
-                            </div>
-                        </div>
-                    </div>
+                <div class="information-icons">
+                    <img class="styles-icons" src="img/restructure/icono (nivel_ingles).png" alt="Icono de nivel de inglés">
+                    <div class="title-symbols">
+                        <h3 class="h3-titles-subtitles">Nivel de Inglés: C1</h3>
+                        <p class="achievements-p">Validado por Trinity College London</p>
+                    </div> 
                 </div>
             </div>
-        <!--tergata de Estrella Salazar -->
-            <div class="container-card">
-                <div class="card-header-logo">
-                    <img src="img/restructure/IMAGEN nombre sin fonfo .png" alt="imagen-logo-card">
-                </div>
-                <div class="card-body">
-                    <div class="ambassador-name">
-                        <h3 class="h3-titles-subtitles">Estrella Salazar</h3>
-                    </div>
-                    <div class="card-top">
-                        <div class="card-profile-picture">
-                            <div class="img-ambassador">
-                                <img src="img/restructure/6.png" alt="imagen-logo-card">
-                            </div>
-                    <!--
-                            <div class="audio-container">
-                                <button class="play-button">
-                                    <svg class="play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
-                                      <path d="M8 5v14l11-7z"/>
-                                    </svg>
-                                    Play
-                                    <audio id="audio" src="audio"></audio>
-                                  </button>                        
-                            </div>-->
-                        </div>
-                        <div class="information-icons">
-                            <div class="information-icons-add">
-                                <img class="styles-icons" src="img/restructure/icono (estudios).png" alt="icono-estudios">
-                                <div class="title-symbols">
-                                    <h4 class="h3-titles-subtitles">ESTUDIOS</h4>
-                                    <p class="achievements-p">Estudiante de ingeniería  en Biotecnología  </p>
-                                </div>
-                            </div>
-                            <div class="information-icons-add">
-                                <img class="styles-icons" src="img/restructure/icono (nivel_ingles).png" alt="icono-nivel-de-ingles">
-                                <div class="title-symbols">
-                                    <h4 class="h3-titles-subtitles">Nivel de ingles</h4>
-                                    <p class="achievements-p">B2  oxford university</p>
-                                </div>
-                            </div>
-                            <div class="information-icons-add">
-                                <img class="styles-icons" src="img/restructure/icono (paises_visitados).png" alt="icono-primer-viaje-internacional">
-                                <div class="title-symbols">
-                                    <h4 class="h3-titles-subtitles">Primer viaje Internacional</h4>
-                                    <p class="achievements-p"> A los 15 años de edad </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-center">
-                        <div class="achievements">
-                            <div class="achievements-title">
-                                <img class="styles-icons" src="img/restructure/icono (logros).png" alt="modal-icons-1">
-                                <h4 class="h3-titles-subtitles">Logros</h4>
-                            </div>
-                            <p class="achievements-p">Gracias a que aprendí inglés en Express Learning Online y que utilizo ese idioma para participar en ponencias internacionales, fui seleccionada para representar a Latinoamérica en la categoría de Aspiring Teen Award, en la sexta edición de los Women in Tech Global Awards, en Dubai, Emiratos Árabe. Además, obtuve una beca para asistir a Israel al ""Instituto Internacional de Verano dé Ciencias" en el Instituto Weizmann. El gran nivel de inglés que adquirí en ELON me ha permitido tener grandiosos momentos conversando con investigadores y estudiantes de todo el mundo, con quienes sigo colaborando, sin importar que su inglés sea Británico o Americano</p>
-                        </div>
-                    </div>
-                    <div class="separator"></div>
-                    <div class="card-bottom">
-                        <div class="countries-visited">
-                            <h3 class="h3-titles-subtitles">paises visitados</h3>
-                            <div class="countries-flags">
-                                <img src="img/restructure/banderas/il.png" alt="">
-                            </div>
-                        </div>
-                    </div>
+            <div class="card-center">
+                <p class="achievements-p">
+                    Mientras concluía mi carrera universitaria estudié inglés en Express Learning Online. Comencé mi internacionalización en Japón, después hice un voluntariado en Brasil. Posteriormente trabajé en el área de Turismo como concierge bilingüe y actualmente ejerzo la comunicación digital. Hablar inglés me ha permitido ser viajera, fotógrafa y emprendedora. He conocido diferentes lugares de Sudamérica, Norte América y Asia. He aprendido de otras culturas gracias a que estudié y certifiqué el idioma inglés en ELON.
+                </p>
+            </div>
+            <div class="separator"></div>
+            <div class="card-bottom">
+                <h3>Países Visitados:</h3>
+                <div class="countries-flags">
+                    <img src="img/restructure/banderas/ca.png" alt="Bandera-icono">
+                    <img src="img/restructure/banderas/jp.png" alt="Bandera-icono">
+                    <img src="img/restructure/banderas/co.png" alt="Bandera-icono">
+                    <img src="img/restructure/banderas/gt.png" alt="Bandera-icono">
+                    <img src="img/restructure/banderas/pa.png" alt="Bandera-icono">
+                    <img src="img/restructure/banderas/br.png" alt="Bandera-icono">
+                    <img src="img/restructure/banderas/ca.png" alt="Bandera-icono">
+                    <img src="img/restructure/banderas/us.png" alt="Bandera-icono">
+                    <img src="img/restructure/banderas/do.png" alt="Bandera-icono">
                 </div>
             </div>
-        <!--tergata de Guillermo Jesus -->
-            <div class="container-card">
-                <div class="card-header-logo">
-                    <img src="img/restructure/IMAGEN nombre sin fonfo .png" alt="imagen-logo-card">
+        </div>
+        <!---Karla Pérez-->
+        <div class="container-card">
+            <div class="ambassador-name">
+                <h2>Karla Pérez</h2>
+            </div>
+            <div class="card-top">
+                <div class="card-profile-picture">
+                    <img src="img/restructure/5.png" alt="Imagen-perfil">
                 </div>
-                <div class="card-body">
-                    <div class="ambassador-name">
-                        <h3 class="h3-titles-subtitles">Guillermo Jesus</h3>
-                    </div>
-                    <div class="card-top">
-                        <div class="card-profile-picture">
-                            <div class="img-ambassador">
-                                <img src="img/restructure/7.png" alt="imagen-logo-card">
-                            </div>
-                    <!--
-                            <div class="audio-container">
-                                <button class="play-button">
-                                    <svg class="play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
-                                      <path d="M8 5v14l11-7z"/>
-                                    </svg>
-                                    Play
-                                    <audio id="audio" src="audio"></audio>
-                                  </button>                        
-                            </div>-->
-                        </div>
-                        <div class="information-icons">
-                            <div class="information-icons-add">
-                                <img class="styles-icons" src="img/restructure/icono (estudios).png" alt="icono-estudios">
-                                <div class="title-symbols">
-                                    <h4 class="h3-titles-subtitles">ESTUDIOS</h4>
-                                    <p class="achievements-p">
-                                        Profesional técnico en sistemas electrónicos de aviación (CONALEP)</p>
-                                </div>
-                            </div>
-                            <div class="information-icons-add">
-                                <img class="styles-icons" src="img/restructure/icono (nivel_ingles).png" alt="icono-nivel-de-ingles">
-                                <div class="title-symbols">
-                                    <h4 class="h3-titles-subtitles">Nivel de ingles</h4>
-                                    <p class="achievements-p">B1  Trinity College London</p>
-                                </div>
-                            </div>
-                            <div class="information-icons-add">
-                                <img class="styles-icons" src="img/restructure/icono (paises_visitados).png" alt="icono-primer-viaje-internacional">
-                                <div class="title-symbols">
-                                    <h4 class="h3-titles-subtitles">Primer viaje Internacional</h4>
-                                    <p class="achievements-p">En Enero del 2024</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-center">
-                        <div class="achievements">
-                            <div class="achievements-title">
-                                <img class="styles-icons" src="img/restructure/icono (logros).png" alt="modal-icons-1">
-                                <h4 class="h3-titles-subtitles">Logros</h4>
-                            </div>
-                            <p class="achievements-p">En la preparatoria, comencé a tomar cursos de inglés en Express Learning Online, donde aprendí a comunicarme perfectamente en ese segundo idioma, hasta que logré certificarme internacionalmente en ELON. Esto me permitió viajar a República Dominicana por cuestiones laborales y posteriormente ser contratado como instructor en la Escuela de Vuelo Aeronacional en el 2022. Gracias a la experiencia que he acumulado durante estos años, saber inglés y estar certificado, fui seleccionado para obtener una visa trabajo en Victorville California, Estados Unidos</p>
-                        </div>
-                    </div>
-                    <div class="separator"></div>
-                    <div class="card-bottom">
-                        <div class="countries-visited">
-                            <h3 class="h3-titles-subtitles">paises visitados</h3>
-                            <div class="countries-flags">
-                                <img src="img/restructure/banderas/us.png" alt="">
-                                <img src="img/restructure/banderas/do.png" alt="">
-                                <img src="img/restructure/banderas/je.png" alt="">
-                            </div>
-                        </div>
-                    </div>
+                <div class="information-icons">
+                    <img class="styles-icons" src="img/restructure/icono (nivel_ingles).png" alt="Icono de nivel de inglés">
+                    <div class="title-symbols">
+                        <h3 class="h3-titles-subtitles">Nivel de Inglés: B2</h3>
+                        <p class="achievements-p">Validado por Trinity College London</p>
+                    </div> 
                 </div>
             </div>
-        <!--tergata de Lourdes Bucio -->
-            <div class="container-card">
-                <div class="card-header-logo">
-                    <img src="img/restructure/IMAGEN nombre sin fonfo .png" alt="imagen-logo-card">
-                </div>
-                <div class="card-body">
-                    <div class="ambassador-name">
-                        <h3 class="h3-titles-subtitles">Lourdes Bucio</h3>
-                    </div>
-                    <div class="card-top">
-                        <div class="card-profile-picture">
-                            <div class="img-ambassador">
-                                <img src="img/restructure/8.png" alt="imagen-logo-card">
-                            </div>
-                    <!--
-                            <div class="audio-container">
-                                <button class="play-button">
-                                    <svg class="play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
-                                      <path d="M8 5v14l11-7z"/>
-                                    </svg>
-                                    Play
-                                    <audio id="audio" src="audio"></audio>
-                                  </button>                        
-                            </div>-->
-                        </div>
-                        <div class="information-icons">
-                            <div class="information-icons-add">
-                                <img class="styles-icons" src="img/restructure/icono (estudios).png" alt="icono-estudios">
-                                <div class="title-symbols">
-                                    <h4 class="h3-titles-subtitles">ESTUDIOS</h4>
-                                    <p class="achievements-p">Estudiante de secundaria</p>
-                                </div>
-                            </div>
-                            <div class="information-icons-add">
-                                <img class="styles-icons" src="img/restructure/icono (nivel_ingles).png" alt="icono-nivel-de-ingles">
-                                <div class="title-symbols">
-                                    <h4 class="h3-titles-subtitles">Nivel de ingles</h4>
-                                    <p class="achievements-p">B2  Trinity College London</p>
-                                </div>
-                            </div>
-                            <div class="information-icons-add">
-                                <img class="styles-icons" src="img/restructure/icono (paises_visitados).png" alt="icono-primer-viaje-internacional">
-                                <div class="title-symbols">
-                                    <h4 class="h3-titles-subtitles">Primer viaje Internacional</h4>
-                                    <p class="achievements-p">En el 2014  a los 56 años de edad </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-center">
-                        <div class="achievements">
-                            <div class="achievements-title">
-                                <h4 class="h3-titles-subtitles">Logros</h4>
-                                <img class="styles-icons" src="img/restructure/icono (logros).png" alt="modal-icons-1">
-                            </div>
-                            <p class="achievements-p">Me siento muy emocionada porque he logrado colocarme en un trabajo en Estados Unidos que me permitirá tener un verdadero desarrollo personal y profesional. Por lo tanto, me queda claro que la edad no es de un impedimento para lograr éxitos en la vida, si se cuenta con docentes de la calidad de los que integran el equipo de Express Learning Online, siempre brindando todo su apoyo a sus estudiantes de principio a fin.</p>
-                        </div>
-                    </div>
-                    <div class="separator"></div>
-                    <div class="card-bottom">
-                        <div class="countries-visited">
-                            <h3 class="h3-titles-subtitles">paises visitados</h3>
-                            <div class="countries-flags">
-                                <img src="img/restructure/banderas/us.png" alt="">
-                            </div>
-                        </div>
-                    </div>
+            <div class="card-center">
+                <p class="achievements-p">
+                    El inglés que aprendí en Express Learning Online desde que era estudiante de preparatoria, me brindó la oportunidad de ser aceptada para trabajar en una empresa internacional de tecnología. He viajado por trabajo y por placer a diferentes países de Norteamérica, Centroamérica, Sudamérica, las Antillas y Europa Central. Lo cual, me ha permitido vivir la interculturalidad muy de cerca, además de que he logrado mejorar mis habilidades de comunicación con mis superiores y compañeros. Aprender inglés y certificarme en ELON ha sido la mejor inversión en tiempo y dinero que mis padres y yo hemos hecho.
+                </p>
+            </div>
+            <div class="separator"></div>
+            <div class="card-bottom">
+                <h3>Países Visitados:</h3>
+                <div class="countries-flags">
+                    <img src="img/restructure/banderas/de.png" alt="Bandera-icono">
+                    <img src="img/restructure/banderas/co.png" alt="Bandera-icono">
+                    <img src="img/restructure/banderas/gt.png" alt="Bandera-icono">
+                    <img src="img/restructure/banderas/cl.png" alt="Bandera-icono">
+                    <img src="img/restructure/banderas/ch.png" alt="Bandera-icono">
+                    <img src="img/restructure/banderas/cu.png" alt="Bandera-icono">
+                    <img src="img/restructure/banderas/us.png" alt="Bandera-icono">
+                    <img src="img/restructure/banderas/br.png" alt="Bandera-icono">
+                    <img src="img/restructure/banderas/cz.png" alt="Bandera-icono">
                 </div>
             </div>
-        <!--tergata de Laura Romero -->
-            <div class="container-card">
-                <div class="card-header-logo">
-                    <img  src="img/restructure/IMAGEN nombre sin fonfo .png" alt="imagen-logo-card">
+        </div>
+        <!--Estrella Salazar-->
+        <div class="container-card">
+            <div class="ambassador-name">
+                <h2>Estrella Salazar</h2>
+            </div>
+            <div class="card-top">
+                <div class="card-profile-picture">
+                    <img src="img/restructure/6.png" alt="Imagen-perfil">
                 </div>
-                <div class="card-body">
-                    <div class="ambassador-name">
-                        <h3 class="h3-titles-subtitles">Laura Romero</h3>
-                    </div>
-                    <div class="card-top">
-                        <div class="card-profile-picture">
-                            <div class="img-ambassador">
-                                <img src="img/restructure/9.png" alt="imagen-logo-card">
-                            </div>
-                    <!--
-                            <div class="audio-container">
-                                <button class="play-button">
-                                    <svg class="play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
-                                      <path d="M8 5v14l11-7z"/>
-                                    </svg>
-                                    Play
-                                    <audio id="audio" src="audio"></audio>
-                                  </button>                        
-                            </div>-->
-                        </div>
-                        <div class="information-icons">
-                            <div class="information-icons-add">
-                                <img class="styles-icons" src="img/restructure/icono (estudios).png" alt="icono-estudios">
-                                <div class="title-symbols">
-                                    <h4 class="h3-titles-subtitles">ESTUDIOS</h4>
-                                    <p class="achievements-p">Piloto de Aviación cero a comercial de ala fija</p>
-                                </div>
-                            </div>
-                            <div class="information-icons-add">
-                                <img class="styles-icons" src="img/restructure/icono (nivel_ingles).png" alt="icono-nivel-de-ingles">
-                                <div class="title-symbols">
-                                    <h4 class="h3-titles-subtitles">Nivel de ingles</h4>
-                                    <p class="achievements-p"> B2 Oxford University</p>
-                                </div>
-                            </div>
-                            <div class="information-icons-add">
-                                <img class="styles-icons" src="img/restructure/icono (paises_visitados).png" alt="icono-primer-viaje-internacional">
-                                <div class="title-symbols">
-                                    <h4 class="h3-titles-subtitles">Primer viaje Internacional</h4>
-                                    <p class="achievements-p"> Mi primer viaje internacional  fue a los 15 años </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-center">
-                        <div class="achievements">
-                            <div class="achievements-title">
-                                <img class="styles-icons" src="img/restructure/icono (logros).png" alt="modal-icons-1">
-                                <h4 class="h3-titles-subtitles">Logros</h4>
-                            </div>
-                            <p class="achievements-p">Mientras estoy concluyendo mi carrera de piloto, estoy perfeccionando mi nivel de inglés en Express Learning Online ya que es un requisito para mi carrera, además de que me gusta viajar por placer al extranjero para conocer otras culturas, costumbres y tradiciones. Aprender inglés en Express Learning Online y viajar a lugares donde se habla el idioma, me invita a disfrutar aún más de mis clases de inglés en ELON y entender la importancia de adquirir esta segunda lengua desde temprana edad.</p>
-                        </div>
-                    </div>
-                    <div class="separator"></div>
-                    <div class="card-bottom">
-                        <div class="countries-visited">
-                            <h3 class="h3-titles-subtitles">paises visitados</h3>
-                            <div class="countries-flags">
-                                <img src="img/restructure/banderas/us.png" alt="">
-                                <img src="img/restructure/banderas/ca.png" alt="">
-                                <img src="img/restructure/banderas/cu.png" alt="">
-                            </div>
-                        </div>
-                    </div>
+                <div class="information-icons">
+                    <img class="styles-icons" src="img/restructure/icono (nivel_ingles).png" alt="Icono de nivel de inglés">
+                    <div class="title-symbols">
+                        <h3 class="h3-titles-subtitles">Nivel de Inglés: B2</h3>
+                        <p class="achievements-p">Validado por oxford university</p>
+                    </div> 
                 </div>
             </div>
-        <!--tergata de STEPHANIE TAPIA-->
-            <div class="container-card">
-                <div class="card-header-logo">
-                    <img src="img/restructure/IMAGEN nombre sin fonfo .png" alt="imagen-logo-card">
-                </div>
-                <div class="card-body">
-                    <div class="ambassador-name">
-                        <h3 class="h3-titles-subtitles">STEPHANIE TAPIA</h3>
-                    </div>
-                    <div class="card-top">
-                        <div class="card-profile-picture">
-                            <div class="img-ambassador">
-                                <img src="img/restructure/10.png" alt="imagen-logo-card">
-                            </div>
-                    <!--
-                            <div class="audio-container">
-                                <button class="play-button">
-                                    <svg class="play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
-                                      <path d="M8 5v14l11-7z"/>
-                                    </svg>
-                                    Play
-                                    <audio id="audio" src="audio"></audio>
-                                  </button>                        
-                            </div>-->
-                        </div>
-                        <div class="information-icons">
-                            <div class="information-icons-add">
-                                <img class="styles-icons" src="img/restructure/icono (estudios).png" alt="icono-estudios">
-                                <div class="title-symbols">
-                                    <h4 class="h3-titles-subtitles">ESTUDIOS</h4>
-                                    <p class="achievements-p">Lincenciada  en Inovación de Negocios </p>
-                                </div>
-                            </div>
-                            <div class="information-icons-add">
-                                <img class="styles-icons" src="img/restructure/icono (nivel_ingles).png" alt="icono-nivel-de-ingles">
-                                <div class="title-symbols">
-                                    <h4 class="h3-titles-subtitles">Nivel de ingles</h4>
-                                    <p class="achievements-p">B1</p>
-                                </div>
-                            </div>
-                            <div class="information-icons-add">
-                                <img class="styles-icons" src="img/restructure/icono (paises_visitados).png" alt="icono-primer-viaje-internacional">
-                                <div class="title-symbols">
-                                    <h4 class="h3-titles-subtitles">Primer viaje Internacional</h4>
-                                    <p class="achievements-p">canada</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-center">
-                        <div class="achievements">
-                            <div class="achievements-title">
-                                <img class="styles-icons" src="img/restructure/icono (logros).png" alt="modal-icons-1">
-                                <h4 class="h3-titles-subtitles">Logros</h4>
-                            </div>
-                            <p class="achievements-p">Me gustaría expresar mi más sincero agradecimiento a Express Learning Online por sus increíbles enseñanzas en el idioma inglés, gracias a ellos tuve la maravillosa oportunidad de irme a estudiar a Canadá, estando allá me sumergí en una nueva cultura y conocí a personas increíbles. Actualmente trabajo para la cadena hotelera Nickelodeon y todo esto ha sido posible gracias a Express Learning Online que confió en mí y me brindó las herramientas necesarias para alcanzar mis sueños. No puedo expresar con palabras lo agradecida que estoy por esta incréble oportunidad que ha moldeado mi vida de forma positiva.</p>
-                        </div>
-                    </div>
-                    <div class="separator"></div>
-                    <div class="card-bottom">
-                        <div class="countries-visited">
-                            <h3 class="h3-titles-subtitles">paises visitados</h3>
-                            <div class="countries-flags">
-                                <img src="img/restructure/banderas/ca.png" alt="">
-                            </div>
-                        </div>
-                    </div>
+            <div class="card-center">
+                <p class="achievements-p">
+                    Gracias a que aprendí inglés en Express Learning Online y que utilizo ese idioma para participar en ponencias internacionales, fui seleccionada para representar a Latinoamérica en la categoría de Aspiring Teen Award, en la sexta edición de los Women in Tech Global Awards, en Dubai, Emiratos Árabe. Además, obtuve una beca para asistir a Israel al ""Instituto Internacional de Verano dé Ciencias" en el Instituto Weizmann. El gran nivel de inglés que adquirí en ELON me ha permitido tener grandiosos momentos conversando con investigadores y estudiantes de todo el mundo, con quienes sigo colaborando, sin importar que su inglés sea Británico o Americano.
+                </p>
+            </div>
+            <div class="separator"></div>
+            <div class="card-bottom">
+                <h3>Países Visitados:</h3>
+                <div class="countries-flags">
+                    <img src="img/restructure/banderas/il.png" alt="Bandera-icono">
                 </div>
             </div>
+        </div>
+        <!--Guillermo Jesus-->
+        <div class="container-card">
+            <div class="ambassador-name">
+                <h2>Guillermo Jesus</h2>
+            </div>
+            <div class="card-top">
+                <div class="card-profile-picture">
+                    <img src="img/restructure/7.png" alt="Imagen-perfil">
+                </div>
+                <div class="information-icons">
+                    <img class="styles-icons" src="img/restructure/icono (nivel_ingles).png" alt="Icono de nivel de inglés">
+                    <div class="title-symbols">
+                        <h3 class="h3-titles-subtitles">Nivel de Inglés: B1</h3>
+                        <p class="achievements-p">Validado por Trinity College London</p>
+                    </div> 
+                </div>
+            </div>
+            <div class="card-center">
+                <p class="achievements-p">
+                    En la preparatoria, comencé a tomar cursos de inglés en Express Learning Online, donde aprendí a comunicarme perfectamente en ese segundo idioma, hasta que logré certificarme internacionalmente en ELON. Esto me permitió viajar a República Dominicana por cuestiones laborales y posteriormente ser contratado como instructor en la Escuela de Vuelo Aeronacional en el 2022. Gracias a la experiencia que he acumulado durante estos años, saber inglés y estar certificado, fui seleccionado para obtener una visa trabajo en Victorville California, Estados Unidos.
+                </p>
+            </div>
+            <div class="separator"></div>
+            <div class="card-bottom">
+                <h3>Países Visitados:</h3>
+                <div class="countries-flags">
+                    <img src="img/restructure/banderas/us.png" alt="Bandera-icono">
+                    <img src="img/restructure/banderas/do.png" alt="Bandera-icono">
+                    <img src="img/restructure/banderas/je.png" alt="Bandera-icono">
+                </div>
+            </div>
+        </div>
+        <!-- Lourdes Bucio-->
+        <div class="container-card">
+            <div class="ambassador-name">
+                <h2> Lourdes Bucio</h2>
+            </div>
+            <div class="card-top">
+                <div class="card-profile-picture">
+                    <img src="img/restructure/8.png" alt="Imagen-perfil">
+                </div>
+                <div class="information-icons">
+                    <img class="styles-icons" src="img/restructure/icono (nivel_ingles).png" alt="Icono de nivel de inglés">
+                    <div class="title-symbols">
+                        <h3 class="h3-titles-subtitles">Nivel de Inglés: B2</h3>
+                        <p class="achievements-p">Validado por Trinity College London</p>
+                    </div> 
+                </div>
+            </div>
+            <div class="card-center">
+                <p class="achievements-p">
+                    Desde los días de preparatoria hasta las salas de juntas internacionales, el inglés ha sido mi pasaporte al mundo. Gracias a Express Learning Online, no solo me lancé a aventuras en distintos rincones del globo, sino que también abracé culturas tan diversas como las vistas en Europa Central y el Caribe. Cada conversación con colegas, cada acuerdo cerrado, y cada nueva amistad, se han tejido con las habilidades que ELON me ayudó a pulir. Derribar las barreras de la comunicación me permitieron conectar con mis superiores y compañeros. Estudiar en ELON no fue una simple inversión; fue la chispa de una transformación personal y profesional que aún sigue iluminando mi camino.
+                </p>
+            </div>
+            <div class="separator"></div>
+            <div class="card-bottom">
+                <h3>Países Visitados:</h3>
+                <div class="countries-flags">
+                    <img src="img/restructure/banderas/us.png" alt="Bandera-icono">
+                </div>
+            </div>
+        </div>
+        <!-- Laura Romero-->
+        <div class="container-card">
+            <div class="ambassador-name">
+                <h2> Laura Romero</h2>
+            </div>
+            <div class="card-top">
+                <div class="card-profile-picture">
+                    <img src="img/restructure/9.png" alt="Imagen-perfil">
+                </div>
+                <div class="information-icons">
+                    <img class="styles-icons" src="img/restructure/icono (nivel_ingles).png" alt="Icono de nivel de inglés">
+                    <div class="title-symbols">
+                        <h3 class="h3-titles-subtitles">Nivel de Inglés: B2</h3>
+                        <p class="achievements-p">Validado por Oxford University</p>
+                    </div> 
+                </div>
+            </div>
+            <div class="card-center">
+                <p class="achievements-p">
+                    Mientras estoy concluyendo mi carrera de piloto, estoy perfeccionando mi nivel de inglés en Express Learning Online ya que es un requisito para mi carrera, además de que me gusta viajar por placer al extranjero para conocer otras culturas, costumbres y tradiciones. Aprender inglés en Express Learning Online y viajar a lugares donde se habla el idioma, me invita a disfrutar aún más de mis clases de inglés en ELON y entender la importancia de adquirir esta segunda lengua desde temprana edad.    
+                </p>
+            </div>
+            <div class="separator"></div>
+            <div class="card-bottom">
+                <h3>Países Visitados:</h3>
+                <div class="countries-flags">
+                    <img src="img/restructure/banderas/us.png" alt="Bandera-icono">
+                    <img src="img/restructure/banderas/ca.png" alt="Bandera-icono">
+                    <img src="img/restructure/banderas/cu.png" alt="Bandera-icono">
+   
+                </div>
+            </div>
+        </div>
+        <!--8-->
+        <div class="container-card">
+            <div class="ambassador-name">
+                <h2>STEPHANIE TAPIA</h2>
+            </div>
+            <div class="card-top">
+                <div class="card-profile-picture">
+                    <img src="img/restructure/10.png" alt="Imagen-perfil">
+                </div>
+                <div class="information-icons">
+                    <img class="styles-icons" src="img/restructure/icono (nivel_ingles).png" alt="Icono de nivel de inglés">
+                    <div class="title-symbols">
+                        <h3 class="h3-titles-subtitles">Nivel de Inglés: B1</h3>
+                        <p class="achievements-p">Validado por Trinity College London</p>
+                    </div> 
+                </div>
+            </div>
+            <div class="card-center">
+                <p class="achievements-p">
+                    Me gustaría expresar mi más sincero agradecimiento a Express Learning Online por sus increíbles enseñanzas en el idioma inglés, gracias a ellos tuve la maravillosa oportunidad de irme a estudiar a Canadá, estando allá me sumergí en una nueva cultura y conocí a personas increíbles. Actualmente trabajo para la cadena hotelera Nickelodeon y todo esto ha sido posible gracias a Express Learning Online que confió en mí y me brindó las herramientas necesarias para alcanzar mis sueños. No puedo expresar con palabras lo agradecida que estoy por esta incréble oportunidad que ha moldeado mi vida de forma positiva.
+                </p>
+            </div>
+            <div class="separator"></div>
+            <div class="card-bottom">
+                <h3>Países Visitados:</h3>
+                <div class="countries-flags">
+                    <img src="img/restructure/banderas/ca.png" alt="Bandera-icono">
+                </div>
+            </div>
+        </div>
     </section>
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -1024,11 +468,7 @@
         </div>
     </div>
     <!-- Footer End -->
-
-
     <!-- Back to Top -->
-
-
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
