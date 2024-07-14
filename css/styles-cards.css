@@ -1,0 +1,160 @@
+/* Contenedor general de las tarjetas de embajadores */
+.container-ambassador-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    box-sizing: border-box;
+    margin: 32px;
+}
+/* Contenedor de tarjeta individual */
+.container-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    background-color: #181d38;
+    padding: 38px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(171, 170, 170, 0.5); /* Ajuste aquí para la sombra */
+}    
+/* Estilos generales de los títulos y subtítulos */
+.h3-titles-subtitles{
+    font-weight: 900;
+    line-height: 1.5;
+    margin: 0;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 0; 
+}
+/* Estilos de los párrafos generales */
+.achievements-p {
+    margin: 0;
+    font-size: 15px;
+    color: #fff;
+    text-align: justify;
+}
+/* Estilos generales para los íconos */
+.styles-icons {
+    width: 42px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 3px solid #925C34; 
+    box-sizing: border-box; 
+}
+/* Estilos del nombre del embajador */
+.ambassador-name {
+    width: 100%;
+    margin: 1em 0;
+    text-align: center;
+}
+.ambassador-name h2 {
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0; 
+    font-size: 24px;
+    color: #fff;
+    margin: 0;
+}
+/* Estilos del perfil */
+.card-top {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 16px;
+}
+.card-profile-picture {
+    display: flex;
+    justify-content: center;
+    width:100%;
+}
+.card-profile-picture img {
+    width: 10em;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 8px solid #abaaaa; 
+    object-fit: cover; 
+}
+/* Efectos de hover */
+.information-icons img:hover {
+    transform: scale(1.2); 
+    color: #61DFF2; 
+}
+.countries-flags img:hover {
+    transform: scale(2.1); 
+    color: #61DFF2; 
+}
+.information-icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    width: 100%; 
+    padding: 10px 0;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+/* Estilos del centro de la tarjeta */
+.card-center {
+    width: 100%;
+    height: 100%;
+}
+/* Separador */
+.separator {
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff; 
+    margin: 1em 0;
+}
+/* Estilos de la parte inferior de la tarjeta */
+.card-bottom{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.card-bottom h3 {
+    font-weight: 900;
+    line-height: 1.5;
+    margin: 0;
+    color: #fff;
+    font-size: 16px;
+    white-space: nowrap;
+    letter-spacing: 0;
+}
+.countries-flags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    gap: 8px;
+    width: 70%;
+}
+.countries-flags img {
+    width: 32px;
+    aspect-ratio: 2/1;
+}
+/* Pantallas extra pequeñas (menos de 576px) */
+@media (max-width: 575.98px) {
+    
+    .achievements-p {
+        font-size: 12px;
+    }
+    .ambassador-name{
+        font-size: 16px;
+    }
+    .card-bottom h3 {
+        font-size: 16px;
+    }
+    .countries-flags img {
+    width: 20px;
+    aspect-ratio: 2/1;
+}
+}
