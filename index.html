@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Google analitycs -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RYVNZBQ7TK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-RYVNZBQ7TK');
+    </script>
     <meta charset="utf-8">
-    <title>Express Learning online</title>
+    <title>ELON School</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="escuela, inglés, online, cursos, flexibles, en linea, certificaciones, cursos, talleres" name="keywords">
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/LogoNew.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,6 +27,7 @@
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
 
     <!-- Libraries Stylesheet -->
     <link href="./lib/animate/animate.min.css" rel="stylesheet">
@@ -28,10 +38,13 @@
 
     <!-- Template Stylesheet -->
     <link href="./css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/burbuja.css">
+
     <!-- Gallery stylesheet -->
     <link rel="stylesheet" href="./css/gallery-certifications.css">
     <!-- Parallax Stylesheet-->
     <link rel="stylesheet" href="./css/parallax.css">
+
 </head>
 
 <body>
@@ -361,8 +374,13 @@
            <!-- <h6 class="section-title bg-white text-center text-primary px-3">Alumnos certificados</h6> -->
         </div>
         <div class="container-gallery">
-                <img src="./img/eres tu.png" alt="Alumno certificado siete" class="gallery-image">
                 <!--Efecto overlay-->
+                <div class="image-overlay"> 
+                    <img src="./img/proximo_certificarse.png" alt="Alumno certificado siete" class="gallery-image"> 
+                    <div class="overlay">
+                        <h1 style="text-align: center;">El próximo en certificarse,¡Serás tu!</h1> 
+                    </div> 
+                </div>
 
                 <div class="image-overlay">
                     <img src="./img/certificacion-quience.jpg" alt="Alumno certificado siete" class="gallery-image">
@@ -520,12 +538,12 @@
                 <div class="col-lg-4 col-md-8">
                     <h4 class="text-white mb-3">Contacto</h4>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>55-7892-9085</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@elon.academy</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@elon.school</p>
                     <p class="mb-2"><i class="fas fa-map-marker-alt me-3"></i>Zibatá. Municipio El Marqués, Querétaro, Qro.</p>
                     <div class="d-flex pt-2 ">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/profile.php?id=61555920905204&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/elon.school/?igsh=M29ucW41dXdqdWFz"><i class="bi bi-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.tiktok.com/@elon.school.oficial?_t=8nMfULz3U1u&_r=1"><i class="bi bi-tiktok"></i></a>
                     </div>
                 </div>
                 <div class="d-flex pt-2 col-md-5 justify-content-center" style="margin: 0; ">
@@ -535,20 +553,20 @@
             </div>
         </div>
         <div class="container">
-            
+            <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                         &copy; <a class="border-bottom" href="#">Express Learning Online</a>, All Right Reserved.
                         Realizado por <a class="border-bottom" href="https://www.instagram.com/fernando.cortesg/">Fernando Cortés</a>
                     </div>
                 </div>
-            
+            </div>
         </div>
     </div>
     <!-- Footer End -->
-
-
     <!-- Back to Top -->
+    <!-- burbuja de whatsapp-->
+    <a href="#" class="whatsapp-bubble" onclick="openWhatsApp()"><i class="bi bi-whatsapp"></i></a>
 
 
     <!-- JavaScript Libraries -->
@@ -562,6 +580,8 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/whatsapp.js"></script>
+
 </body>
 
 </html>
