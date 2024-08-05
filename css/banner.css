@@ -1,0 +1,342 @@
+ main  {
+    margin-bottom: 40px;
+
+ }
+.banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    place-items: center;
+    width: 100vw;
+    min-height: 100vh;
+    background: linear-gradient(#181D38,#1e1838d0);
+  }
+  /* Content */
+  .container-inf {
+    padding-left: 120px;
+    color: #fff;
+  }
+  
+  .container-inf h1 {
+    font-family: "Nunito", sans-serif;
+    font-size: clamp(2rem, 3vw, 5rem);
+    font-weight: 700;
+    background: -webkit-linear-gradient(0deg,#0af89b, #61def2, #07a09e);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.1;
+    margin-bottom: 36px;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .container-inf p {
+    font-size: clamp(0.9rem, 4vw, 1.2rem);
+    line-height: 1.6;
+    padding-right: 100px;
+    animation: fadeIn 2s ease-in-out 0.5s;
+  
+  }
+  
+  .buttonn {
+    background-color: #61def2;
+    font-size: clamp(0.8rem, 8vw, 0.9rem);
+    font-weight: 600;
+    color: #181D38;
+    width: max-content;
+    outline: 0;
+    border: 0;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transform: scale(1);
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    pointer-events: auto;
+    animation: fadeIn 2s ease-in-out 1s;
+  
+  }
+  
+  .buttonn:hover {
+    background-color: #181D38;
+    transform: scale(0.98);
+    
+  }
+  
+  /* fila de las cartas */
+  .stack {
+    position: relative;
+    animation: fadeIn 1s ease-in-out 0.5;
+  
+  }
+  
+  .card {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 350px;
+    height: 500px;
+    border-radius: 2rem;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25),
+      0 15px 20px 0 rgba(0, 0, 0, 0.125);
+    transition: transform 0.6s;
+    user-select: none;
+  }
+  
+  .card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    object-fit: cover;
+  }
+  
+  .card:nth-last-child(n + 5) {
+    --x: calc(-50% + 90px);
+    transform: translate(var(--x), -50%) scale(0.85);
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.01);
+  }
+  
+  .card:nth-last-child(4) {
+    --x: calc(-50% + 60px);
+    transform: translate(var(--x), -50%) scale(0.9);
+  }
+  
+  .card:nth-last-child(3) {
+    --x: calc(-50% + 30px);
+    transform: translate(var(--x), -50%) scale(0.95);
+  }
+  
+  .card:nth-last-child(2) {
+    --x: calc(-50%);
+    transform: translate(var(--x), -50%) scale(1);
+  }
+  
+  .card:nth-last-child(1) {
+    --x: calc(-50% - 30px);
+    transform: translate(var(--x), -50%) scale(1.05);
+  }
+  
+  .card:nth-last-child(1) img {
+    box-shadow: 0 1px 5px 5px rgba(171, 170, 1770, 0.5);
+  }
+  
+  .swap {
+    animation: swap 1.3s ease-out forwards;
+  }
+  
+  @keyframes swap {
+    30% {
+      transform: translate(calc(var(--x) - 250px), -50%) scale(0.85) rotate(-5deg)
+        rotateY(65deg);
+    }
+    100% {
+      transform: translate(calc(var(--x) - 30px), -50%) scale(0.5);
+      z-index: -1;
+    }
+  }
+  
+  /* Media queries para los keyframes */
+  
+  @media (max-width: 1200px) {
+    @keyframes swap {
+      30% {
+        transform: translate(calc(var(--x) - 200px), -50%) scale(0.85)
+          rotate(-5deg) rotateY(65deg);
+      }
+  
+      100% {
+        transform: translate(calc(var(--x) - 30px), -50%) scale(0.5);
+        z-index: -1;
+      }
+    }
+  }
+  
+  @media (max-width: 1050px) {
+    @keyframes swap {
+      30% {
+        transform: translate(calc(var(--x) - 150px), -50%) scale(0.85)
+          rotate(-5deg) rotateY(65deg);
+      }
+  
+      100% {
+        transform: translate(calc(var(--x) - 30px), -50%) scale(0.5);
+        z-index: -1;
+      }
+    }
+  }
+   /* Animaciones */
+   @keyframes fadeIn {
+              from {
+                  opacity: 0;
+                  transform: translateY(20px);
+              }
+              to {
+                  opacity: 1;
+                  transform: translateY(0);
+              }
+          }
+  
+  /* Media queries para contenido */
+  
+  @media (max-width: 1200px) {
+    .container-inf {
+      padding-left: 80px;
+    }
+  
+    .container-inf p {
+      padding-right: 40px;
+    }
+  
+    .card {
+      width: 250px;
+      height: 380px;
+    }
+  }
+  
+  @media (max-width: 1050px) {
+    .container-inf {
+      padding-left: 60px;
+    }
+  
+    .container-inf p {
+      line-height: 1.5;
+    }
+  
+    .card {
+      width: 220px;
+      height: 350px;
+    }
+  }
+  
+  @media (max-width: 990px) {
+    .container-inf p {
+      padding-right: 0;
+    }
+  
+    .card {
+      width: 200px;
+      height: 300px;
+    }
+  }
+  
+  @media (max-width: 950px) {
+    .banner {
+      grid-template-columns: 1fr;
+      grid-template-rows: 4fr 3fr;
+      grid-template-areas:
+        "stacked"
+        "content";
+    }
+  
+    .container-inf {
+      grid-area: content;
+      text-align: center;
+      padding: 0 90px;
+    }
+  
+    .buttonn {
+      margin-bottom: 30px;
+    }
+  
+    .stack {
+      grid-area: stacked;
+    }
+  }
+  
+  @media (max-width: 650px) {
+    .banner {
+      grid-template-rows: 1fr 1fr;
+    }
+  
+    .container-inf {
+      padding: 0 50px;
+    }
+  
+    .container-inf h1 {
+      padding-left: 0;
+    }
+  
+    .buttonn {
+      padding: 5px;
+    }
+  
+    .card {
+      width: 180px;
+      height: 260px;
+    }
+  }
+  @media (max-width: 400px) {
+    .banner {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+      text-align: center;
+      padding: 10px;
+      width: 100%;
+    }
+  
+    .container-inf {
+      padding: 0 20px;
+    }
+  
+    .container-inf h1 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+  
+    .container-inf p {
+      font-size: 0.8rem;
+      padding-right: 0;
+      line-height: 1.4;
+    }
+  
+    .buttonn {
+      font-size: 0.7rem;
+      margin-bottom: 20px;
+    }
+  
+    .card {
+      width: 150px;
+      height: 220px;
+      margin-bottom: 20px;
+
+    }
+  }
+  @media (max-width: 390px) and (min-width: 320px) {
+    .banner {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      text-align: center;
+      padding: 10px;
+    }
+  
+    .container-inf {
+      padding: 0 15px;
+    }
+  
+    .container-inf h1 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+    }
+  
+    .container-inf p {
+      font-size: 0.75rem;
+      line-height: 1.3;
+      padding-right: 0;
+    }
+  
+    .buttonn {
+      font-size: 0.65rem;
+    }
+  
+    .card {
+      margin: 20px 0;
+      width: 140px;
+      height: 200px;
+    }
+  }
+  
