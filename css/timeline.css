@@ -54,7 +54,9 @@
 #dates a:hover span {
     color: #181d38;
 }
-
+#dates a.selected span.highlight {
+    color: #181d38;
+}
 #dates a::before {
     content: '';
     display: block;
@@ -66,14 +68,11 @@
     position: relative;
     z-index: 1;
 }
-
 #dates a.selected::before,
 #dates a:hover::before {
     background-color: #fff;
     transform: scale(1.3);
- 
 }
-
 .outer-container {
     width: 100%;
     height: 100%;
@@ -84,8 +83,13 @@
     flex-direction: column;
     scroll-behavior: smooth;
     -ms-overflow-style: none;
-    scrollbar-width: none;
+    scrollbar-width: none;   
+    scroll-snap-type: y mandatory;
+    -ms-overflow-style: none; 
     
+}
+.outer-container::-webkit-scrollbar {
+    display: none; 
 }
 .content {
     width: 100%;
@@ -96,7 +100,11 @@
     scroll-snap-align: start;
     scroll-snap-type: y mandatory;
     margin: 20px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
 
+}
+.content.show {
+    transition: transform 0.5s ease-out;
 }
 .image {
     width: 50%;
